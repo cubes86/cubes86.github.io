@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blueviolet;
+}
+
+.Background {
+    background-image: url(images/Background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(118, 18, 128);
+    
+}
+.navigation a{
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    transition: 1s;
+    text-decoration: none;
+}
+.navigation a:hover{
+background-color: #5e0b5b;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.hero img {
+    width: 60%;
+    object-fit: cover;
+    justify-content: center;
+}
+
+.heroText {
+    text-align: center;
+}
+
+h1 {
+    color: aliceblue;
+
+}
+
+h2 {
+    color: aliceblue;
+}
+
+.content {
+    background-color: slateblue;
+}
+
+.info {
+    background-color: violet;
+    border: 10px solid blue;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.infobox {
+    width: 50%;
+    background-color: aquamarine;
+    border: 5px solid white;
+    padding: 5px;
+}
+
+
+
+.artistcontent{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    display: flex;
+    padding: 10px;
+}
+
+.artistinfo {
+    width: 30%;
+    background-color: rgba(173, 216, 230, 0.58);
+    border-radius: 20px;
+    padding: 30px;
+ }
+
+ .artistinfo img {
+    width: 100%;
+    border: 10px solid white;
+    border-radius: 200px;
+    box-shadow: 2px 2px 5px grey;
+    filter: grayscale();
+    transition: 0.5s;
+ }
+
+ .artistinfo:hover img {
+    filter: none;
+    transform: scale(1.1) rotatey(720deg) translatey(-30px);
+    box-shadow: 10px 10px 20px grey;
+ }
+
+ .pinkbg{
+    background-color: pink;
+ }
+
+.footer {
+    background-color: rgb(215, 100, 210);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.footer div {
+    color: white;
+    padding: 10px;
+}
+
+.newsletter {
+    width: 30%;
+}
+
+
+.newsletter h2 {
+    font-family: "Staatliches", cursive;
+    font-size: 20px;
+    color: rgb(249, 49, 142);
+    font-weight: normal;
+}
+
+.newsletter p {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: white;
+}
+
+.inputemail {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 70%;
+}
+
+.inputemail:focus {
+    background-color: white;
+    outline: none;
+    border: 1px solid red;
+}
+
+.inputemail::placeholder {
+    font-style: italic;
+}
+
+.sendemail {
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    background-image: linear-gradient(rgb(180, 234, 244), rgb(109, 188, 202));
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.sendemail:hover {
+    color: white;
+    background-image: linear-gradient(rgb(181, 244, 180), rgb(109, 202, 115));
+}
+
+.footerlinks a {
+    display: block;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.footerlinks a:hover {
+    color: #ef0f6c;
+}
+
+.social img {
+    padding: 10 px;
+    height: 60px;
+    transition: 0.2s;
+}
+
+.social img:hover {
+    transform: scale(110%);
+}
+
+.social a1 img:hover {
+    filter: hue-rotate(-60deg)
+}
+
+.social a2 img:hover {
+    filter: hue-rotate(30deg) saturate(2)
+}
+
+.social a3 img:hover {
+    filter: hue-rotate(-1.5rad) saturate(3)
+}
+
+/*Mobile CSS*/
+
+@media screen and (max-width:1280px) {
+    
+    body{
+        background-image: url(images/artist_10.jpg);
+    }
+
+    .navigation{
+        flex-direction: column;
+        height: 50px;
+        justify-content: flex-start;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .expand{
+        height: 240px;
+    }
+
+    .navigation a{
+        text-align: center;
+    }
+
+    .hamburger{
+        display:block ;
+        font-size: 30px;
+        text-decoration: none;
+    }
+
+
+}
